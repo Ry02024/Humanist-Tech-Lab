@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Architecture | Lumina Tech Arts</title>
+    <meta name="description" content="堅牢なロジックと最新のテクノロジー・スタックに基づく、確かな実装スキルの証明。">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#2C3E50',
+                            light: '#34495E',
+                            dark: '#1A252F',
+                        }
+                    },
+                    animation: {
+                        'fadeIn': 'fadeIn 0.5s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans text-slate-600 antialiased selection:bg-indigo-100 selection:text-indigo-700">
+
+<!-- 1. ヘッダー -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center gap-4">
+    <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+      <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-white font-black shadow-lg" style="background-color: #2C3E50">
+        L
+      </div>
+      <span class="text-lg sm:text-xl font-black text-slate-800 tracking-tight group-hover:text-indigo-600 transition-colors">
+        Lumina Tech Arts
+      </span>
+    </a>
+    
+    <nav class="hidden md:flex items-center gap-6 overflow-x-auto no-scrollbar">
+      
+      <a href="../digital-craftsmanship/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Digital Craftsmanship
+      </a>
+    
+      <a href="../luminous-philosophy/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Luminous Philosophy
+      </a>
+    
+      <a href="../technical-architecture/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Technical Architecture
+      </a>
+    
+      <a href="../creative-spectrum/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Creative Spectrum
+      </a>
+    
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#" class="hidden sm:block px-5 py-2.5 bg-slate-900 text-white text-xs font-black rounded-full hover:bg-indigo-600 transition-all shadow-lg shadow-slate-200 whitespace-nowrap">
+        Contact
+      </a>
+      <button class="md:hidden p-2 text-slate-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <i class="fa-solid fa-bars-staggered text-xl"></i>
+      </button>
+    </div>
+  </div>
+  
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 p-6 space-y-4 animate-fadeIn">
+    <div class="flex flex-col gap-4">
+      
+      <a href="../digital-craftsmanship/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Digital Craftsmanship
+      </a>
+    
+      <a href="../luminous-philosophy/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Luminous Philosophy
+      </a>
+    
+      <a href="../technical-architecture/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Technical Architecture
+      </a>
+    
+      <a href="../creative-spectrum/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+        Creative Spectrum
+      </a>
+    
+      <a href="#" class="block w-full text-center px-5 py-3 bg-slate-900 text-white text-xs font-black rounded-xl">
+        Contact
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="w-full overflow-hidden">
+    <!-- 2. メインヒーローセクション -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-slate-50">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-indigo-50/50 skew-x-12 translate-x-1/4 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 border border-indigo-200 text-indigo-700 text-xs font-bold mb-6">
+                    <i class="fa-solid fa-code"></i> Engineering Excellence
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand mb-8 tracking-tight leading-tight">
+                    堅牢なロジックが、<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">自由な創造</span>を支える。
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-500 leading-relaxed font-medium mb-10 border-l-4 border-indigo-500 pl-6">
+                    Technical Architectureは、美しさを裏側で支える骨格です。<br>
+                    最新のテクノロジースタックとクリーンアーキテクチャにより、<br class="hidden sm:inline">
+                    拡張性と保守性に優れたデジタルプロダクトを実現します。
+                </p>
+                
+                <div class="flex flex-wrap gap-4 text-sm font-bold text-slate-400">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> High Performance</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Scalability</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Modern Security</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. メインコンテンツセクション -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            
+            <!-- Stack Cards -->
+            <div class="mb-20">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-black text-brand mb-4">Core Technology Stack</h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto">プロジェクトの要件に合わせて最適なツールを選定し、技術負債を生まない持続可能なコードベースを構築します。</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Frontend -->
+                    <div class="p-8 rounded-3xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 text-2xl mb-6">
+                            <i class="fa-brands fa-react"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Modern Frontend</h3>
+                        <p class="text-sm text-slate-500 mb-6 leading-relaxed">
+                            React, Vue.js, Next.jsを中心としたコンポーネント指向開発。Tailwind CSSによる効率的なスタイリングと、TypeScriptによる型安全性を徹底。
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">Next.js</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">TypeScript</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">Three.js</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend & API -->
+                    <div class="p-8 rounded-3xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-6">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Robust Backend</h3>
+                        <p class="text-sm text-slate-500 mb-6 leading-relaxed">
+                            Node.jsやGoを用いたスケーラブルなAPI設計。マイクロサービスアーキテクチャの採用や、ヘッドレスCMSとの連携による柔軟なデータフロー。
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">Node.js</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">GraphQL</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">Supabase</span>
+                        </div>
+                    </div>
+
+                    <!-- DevOps & Quality -->
+                    <div class="p-8 rounded-3xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 text-2xl mb-6">
+                            <i class="fa-solid fa-rotate"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">DevOps & Quality</h3>
+                        <p class="text-sm text-slate-500 mb-6 leading-relaxed">
+                            GitHub ActionsによるCI/CDパイプラインの構築。自動テストとコード解析により、リリースのたびに品質が向上する開発サイクルを実現。
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">Docker</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">AWS/Vercel</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">Jest</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Philosophy Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                <div class="bg-brand rounded-[2.5rem] p-10 sm:p-14 text-white relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 text-9xl font-black group-hover:scale-110 transition-transform duration-700">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-black mb-6 relative z-10">Code as Poetry.</h3>
+                    <p class="text-slate-300 leading-relaxed mb-8 relative z-10">
+                        「技術を精神の翼として機能させる」<br><br>
+                        この理念に基づき、コードの一行一行にまで意味を持たせます。
+                        複雑な問題をシンプルに解決すること。それがエンジニアリングにおける最高の親しみやすさであると信じています。
+                    </p>
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="w-12 h-1 bg-indigo-500 rounded-full"></div>
+                        <span class="font-bold text-sm tracking-widest uppercase text-indigo-400">Philosophy</span>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="flex gap-5">
+                        <div class="shrink-0 w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-brand font-bold text-lg">01</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-brand mb-2">パフォーマンス・ファースト</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">ユーザーの体験を阻害しない、瞬時のロードと滑らかなインタラクションを技術的に保証します。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="shrink-0 w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-brand font-bold text-lg">02</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-brand mb-2">アクセシビリティ標準準拠</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">セマンティックなHTML構造とWAI-ARIAの適切な使用により、すべてのユーザーに等しく情報を提供します。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="shrink-0 w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-brand font-bold text-lg">03</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-brand mb-2">持続可能な開発</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed">ドキュメンテーションの整備と可読性の高いコードにより、長期的な運用におけるコストを最小化します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. リンクエリア -->
+            <div class="mt-20 pt-10 border-t border-slate-100">
+                <h3 class="text-xl font-black mb-8 text-slate-800 flex items-center gap-3">
+                  <i class="fa-solid fa-compass text-indigo-500"></i> Browse Content
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                  
+                    <a href="../index.html" class="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-transparent hover:border-indigo-400 hover:bg-white hover:shadow-xl transition-all group">
+                      <span class="font-bold text-slate-700 group-hover:text-indigo-600 text-sm sm:text-base">ホームに戻る</span>
+                      <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                  
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- 5. フッター -->
+<footer class="bg-slate-900 text-white py-16 sm:py-20 px-6 mt-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-white/10 pb-12 mb-12">
+    <div>
+      <h4 class="text-2xl font-black mb-6">Lumina Tech Arts</h4>
+      <p class="text-slate-400 leading-relaxed max-w-md font-medium text-sm sm:text-base">人間の創造性を尊重し、技術を精神の翼として機能させることで、真に豊かなデジタル社会を構築する。</p>
+    </div>
+    <div class="flex flex-col md:items-end justify-center">
+       <div class="flex gap-4 mb-6">
+         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-twitter"></i></a>
+         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-linkedin"></i></a>
+       </div>
+       <p class="text-slate-500 text-xs sm:text-sm font-bold text-center md:text-right">© 2024 Lumina Tech Arts.<br class="sm:hidden"/> Generated by MySiteGen-Agent.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
