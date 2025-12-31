@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スロー・テクノロジーの提唱 - Humanist Tech Lab</title>
+    <meta name="description" content="即時性を追求する技術開発から一歩退き、あえて時間をかけることで生まれる深い洞察や創造性を支える技術の哲学について。">
+    
+    <!-- Google Fonts: Noto Serif JP for elegance, Zen Kaku Gothic New for readability -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#34495E', // Theme color from request
+                            light: '#4b6584',
+                            dark: '#2c3e50',
+                        },
+                        paper: '#f9f9f7', // Slightly warm white for reading
+                    },
+                    fontFamily: {
+                        sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                color: '#333',
+                            },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom tweaks for Japanese typography */
+        body {
+            font-feature-settings: "palt";
+            text-rendering: optimizeLegibility;
+        }
+        .text-justify-jp {
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-paper text-slate-700 antialiased flex flex-col min-h-screen">
+
+    <!-- 1. ナビゲーションバー -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-white">
+                    <i class="fa-solid fa-layer-group text-sm"></i>
+                </div>
+                <span class="font-serif font-bold text-xl text-brand tracking-wider group-hover:opacity-80 transition-opacity">
+                    Humanist Tech Lab
+                </span>
+            </a>
+            <nav>
+                <ul class="flex items-center space-x-6">
+                    <li>
+                        <a href="index.html" class="text-sm font-medium text-slate-500 hover:text-brand transition-colors flex items-center gap-1">
+                            <i class="fa-solid fa-house text-xs"></i> ホーム
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- 2. ヒーローセクション -->
+        <section class="relative bg-brand text-white overflow-hidden py-24 lg:py-32">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                <i class="fa-regular fa-clock absolute -right-20 -top-20 text-[20rem]"></i>
+            </div>
+            <div class="container mx-auto px-6 relative z-10 max-w-4xl fade-in-up">
+                <div class="inline-block px-3 py-1 mb-6 border border-white/30 rounded-full text-xs font-medium tracking-widest uppercase bg-white/10 backdrop-blur-sm">
+                    Philosophy
+                </div>
+                <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-relaxed mb-8">
+                    スロー・テクノロジーの提唱：<br class="hidden md:block" />
+                    加速する世界で「待つ」豊かさを守る
+                </h1>
+                <p class="text-slate-200 text-lg md:text-xl leading-8 font-light max-w-2xl">
+                    即時性を追求する技術開発から一歩退き、あえて時間をかけることで生まれる深い洞察や創造性を支える技術の哲学について。
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. メインコンテンツ -->
+        <article class="container mx-auto px-6 py-16 max-w-3xl">
+            
+            <!-- 導入 -->
+            <div class="prose prose-slate prose-lg max-w-none mb-16 fade-in-up" style="animation-delay: 0.2s;">
+                <p class="font-serif text-2xl leading-10 text-slate-800 mb-8 border-l-4 border-brand pl-6 italic">
+                    「速さは常に善であるか？」<br>
+                    私たちは今、立ち止まって問いかける必要があります。
+                </p>
+                <p class="leading-loose mb-6 text-justify-jp">
+                    現代のテクノロジーは、摩擦をゼロにし、待機時間を極限まで短縮することを至上命題として進化してきました。しかし、Humanist Tech Labは考えます。人間の思考、創造、そして癒やしは、本来「時間」を必要とするプロセスであると。
+                </p>
+            </div>
+
+            <!-- セクション1 -->
+            <section class="mb-16 fade-in-up" style="animation-delay: 0.4s;">
+                <h2 class="font-serif text-2xl font-bold text-brand mb-6 flex items-center gap-3">
+                    <span class="text-indigo-400 opacity-60">01.</span>
+                    空白のデザイン
+                </h2>
+                <p class="leading-loose mb-6 text-justify-jp text-slate-600">
+                    通知が鳴り止まないスマートフォン、数秒の沈黙さえ許されないインターフェース。これらは私たちの注意を細切れにし、深い思索を妨げています。スロー・テクノロジーは、意図的に「空白」をデザインします。
+                </p>
+                <p class="leading-loose text-justify-jp text-slate-600">
+                    例えば、メッセージを送る前にあえて一呼吸置くインターバル、情報の洪水を一時的に堰き止めるデジタル・ダンパー。これらは不便ではなく、思考を熟成させるための必要な儀式なのです。
+                </p>
+            </section>
+
+            <!-- セクション2 -->
+            <section class="mb-16 fade-in-up" style="animation-delay: 0.6s;">
+                <h2 class="font-serif text-2xl font-bold text-brand mb-6 flex items-center gap-3">
+                    <span class="text-indigo-400 opacity-60">02.</span>
+                    精神の拡張としての技術
+                </h2>
+                <p class="leading-loose mb-6 text-justify-jp text-slate-600">
+                    私たちのブランド理念にある通り、技術は「人間の精神の拡張」であるべきです。しかし、現在の技術は往々にして私たちの精神を追い立てる「鞭」になっています。
+                </p>
+                <div class="bg-indigo-50/50 p-6 rounded-xl border border-indigo-100 my-8">
+                    <h4 class="font-bold text-indigo-900 mb-2 text-sm"><i class="fa-solid fa-lightbulb text-indigo-500 mr-2"></i>Humanist Tech Labの視点</h4>
+                    <p class="text-sm leading-relaxed text-indigo-800">
+                        道具が使い手を支配してはなりません。使い手の生体リズムや感情の機微に寄り添い、時には「何もしない」ことを推奨するような、慈悲深いアルゴリズムが必要です。
+                    </p>
+                </div>
+                <p class="leading-loose text-justify-jp text-slate-600">
+                    一人ひとりの尊厳と創造性が中心となる社会において、テクノロジーは静かな執事のように振る舞うべきでしょう。必要な時にだけ現れ、それ以外は背景に徹する。その慎ましさこそが、これからの技術に求められる品格です。
+                </p>
+            </section>
+
+            <!-- 4. 内部リンクエリア (指定ブロックの埋め込み) -->
+            <div class="mt-16 pt-8 border-t border-slate-200 fade-in-up" style="animation-delay: 0.8s;">
+                <h3 class="text-xl font-bold mb-6 text-slate-800 flex items-center gap-2">
+                  <i class="fa-solid fa-compass text-indigo-500"></i> 関連コンテンツ・ナビゲーション
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  
+                    <a href="index.html" class="flex items-center justify-between p-5 bg-white rounded-2xl border border-slate-200 hover:border-indigo-400 hover:shadow-lg transition-all group">
+                      <span class="font-bold text-slate-700 group-hover:text-indigo-600">ホーム</span>
+                      <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                  
+                    <a href="philosophy.html" class="flex items-center justify-between p-5 bg-white rounded-2xl border border-slate-200 hover:border-indigo-400 hover:shadow-lg transition-all group">
+                      <span class="font-bold text-slate-700 group-hover:text-indigo-600">「思想と哲学」へ戻る</span>
+                      <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                  
+                </div>
+              </div>
+
+        </article>
+    </main>
+
+    <!-- 5. フッター -->
+    <footer class="bg-brand text-slate-300 py-12 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <h4 class="text-white font-serif font-bold text-lg mb-2">Humanist Tech Lab</h4>
+                    <p class="text-sm opacity-70">技術を人間の精神の拡張として位置づけ、<br class="hidden sm:inline">一人ひとりの尊厳と創造性が中心となる社会を築く。</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter text-white"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-xs opacity-60 font-sans">
+                <p>&copy; 2024 Humanist Tech Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
