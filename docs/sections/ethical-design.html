@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>エシカル・デザイン | ヒューマニタス・テクノロジー</title>
+    <meta name="description" content="温かみのあるインターフェースと倫理的設計基準に基づいた、人間中心のUXアプローチを解説します。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#4A90E2',
+                        brandDark: '#357ABD',
+                        slate: {
+                            850: '#1e293b', 
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Shippori Mincho"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* カスタムスタイリングによる微調整 */
+        body {
+            font-feature-settings: "palt";
+        }
+        .text-justify-jp {
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-600 antialiased bg-slate-50">
+
+<!-- 1. Header -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+    <a href="../index.html" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-black shadow-lg" style="background-color: #4A90E2">
+        ヒ
+      </div>
+      <span class="text-xl font-black text-slate-800 tracking-tight group-hover:text-indigo-600 transition-colors">ヒューマニタス・テクノロジー (Humanitas Technology)</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="../index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors">ホーム</a>
+      <a href="#" class="px-5 py-2.5 bg-slate-900 text-white text-xs font-black rounded-full hover:bg-indigo-600 transition-all shadow-lg shadow-slate-200">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 2. Hero Section -->
+<section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+    <!-- 背景装飾 -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div class="absolute -top-[20%] -right-[10%] w-[50vw] h-[50vw] rounded-full bg-blue-50 blur-3xl opacity-60"></div>
+        <div class="absolute top-[40%] -left-[10%] w-[40vw] h-[40vw] rounded-full bg-indigo-50 blur-3xl opacity-60"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-brand text-xs font-bold mb-8 tracking-wide uppercase border border-blue-100">
+            <span class="w-2 h-2 rounded-full bg-brand"></span> Ethical Design Philosophy
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 leading-tight tracking-tight font-serif">
+            テクノロジーに、<br>
+            <span class="text-brand">人間の体温</span>を取り戻す。
+        </h1>
+        <p class="text-lg md:text-xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto">
+            数値的な効率性よりも、精神的な豊かさを。<br>
+            私たちは倫理的設計基準に基づき、<br class="hidden md:inline">心に寄り添うインターフェースを創造します。
+        </p>
+    </div>
+</section>
+
+<!-- 3. Main Content -->
+<main class="relative bg-white pb-24">
+    <article class="max-w-3xl mx-auto px-6">
+        
+        <!-- コンテンツ本文 -->
+        <div class="prose prose-lg prose-slate max-w-none">
+            
+            <div class="first-letter:text-6xl first-letter:font-black first-letter:text-slate-900 first-letter:mr-3 first-letter:float-left leading-loose text-justify-jp mb-12">
+                <p class="mb-8">
+                    現代社会において、テクノロジーは空気のように私たちの生活に浸透しています。しかし、その利便性の裏側で、私たちは知らず知らずのうちに画面の向こう側にあるアルゴリズムによって行動を操作され、精神的な疲弊を感じてはいないでしょうか。ヒューマニタス・テクノロジーが提唱する「エシカル・デザイン」は、単なる機能美や使いやすさの追求を超え、ユーザーの「精神的自律性」と「尊厳」を設計の中心に据えるアプローチです。
+                </p>
+            </div>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-16 mb-6 flex items-center gap-3">
+                <span class="w-1 h-8 bg-brand rounded-full"></span>
+                静かなる伴走者として
+            </h2>
+            <p class="leading-loose text-justify-jp mb-8">
+                多くのデジタルプロダクトが、ユーザーの注意を惹きつけ（Attention Economy）、滞在時間を延ばすことに躍起になっています。しかし、私たちはその流れに逆らいます。真に優れたデザインとは、人の思考を中断させるのではなく、思考の流れをスムーズにし、内なる創造性を引き出すための「静かなる伴走者」であるべきだと考えます。通知一つをとっても、それは焦燥感を煽るものであってはなりません。情報の透明性を担保し、いわゆるダークパターンを徹底的に排除することで、ユーザーとの間に深い信頼関係を築きます。
+            </p>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-16 mb-6 flex items-center gap-3">
+                <span class="w-1 h-8 bg-brand rounded-full"></span>
+                共感と創造性の未来へ
+            </h2>
+            <p class="leading-loose text-justify-jp mb-8">
+                温かみのあるインターフェースとは、冷徹な論理コードの上に、人間の体温を感じさせる有機的なレイヤーを重ねることで実現します。私たちが目指すのは、テクノロジーが黒子となり、人間の精神性が主役となる未来です。画面を見ている時間よりも、画面から離れて思索し、行動し、誰かと笑い合う時間こそが尊い。そう心から信じられるプロダクトだけが、共感と創造性に満ちた新しい時代を切り拓くことができるのです。
+            </p>
+
+            <blockquote class="my-12 p-8 bg-slate-50 rounded-2xl border-l-4 border-brand italic text-slate-700 relative">
+                <i class="fa-solid fa-quote-left absolute top-4 left-4 text-blue-100 text-4xl -z-10"></i>
+                <p class="font-serif text-lg leading-relaxed">
+                    「テクノロジーを通じて人間の精神性を拡張し、共感と創造性に満ちた未来を築くこと。」
+                </p>
+                <footer class="mt-4 text-sm font-bold text-slate-400">— ヒューマニタス・テクノロジー ブランド理念</footer>
+            </blockquote>
+
+            <p class="leading-loose text-justify-jp">
+                これこそが私たちの約束であり、エシカル・デザインの真髄です。技術の進化が加速する今だからこそ、私たちは一度立ち止まり、人間らしさとは何かを問い続けます。あなたの心が真に自由であり続けるために、私たちはコードを書き、デザインを描き続けます。
+            </p>
+
+        </div>
+
+        <!-- 4. Link Area -->
+        <div class="mt-20 pt-10 border-t border-slate-100">
+            <h3 class="text-xl font-black mb-8 text-slate-800 flex items-center gap-3">
+              <i class="fa-solid fa-link text-indigo-500"></i> ナビゲーション
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+                <a href="../index.html" class="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-transparent hover:border-indigo-400 hover:bg-white hover:shadow-xl transition-all group">
+                  <span class="font-bold text-slate-700 group-hover:text-indigo-600">ホームに戻る</span>
+                  <i class="fa-solid fa-arrow-right-long text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-2"></i>
+                </a>
+              
+            </div>
+          </div>
+    </article>
+</main>
+
+<!-- 5. Footer -->
+<footer class="bg-slate-900 text-white py-20 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-white/10 pb-12 mb-12">
+    <div>
+      <h4 class="text-2xl font-black mb-6">ヒューマニタス・テクノロジー (Humanitas Technology)</h4>
+      <p class="text-slate-400 leading-relaxed max-w-md font-medium">テクノロジーを通じて人間の精神性を拡張し、共感と創造性に満ちた未来を築くこと。</p>
+    </div>
+    <div class="flex flex-col md:items-end justify-center">
+       <div class="flex gap-4 mb-4">
+         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-twitter"></i></a>
+         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-linkedin"></i></a>
+       </div>
+       <p class="text-slate-500 text-sm font-bold">© 2024 ヒューマニタス・テクノロジー (Humanitas Technology). All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
