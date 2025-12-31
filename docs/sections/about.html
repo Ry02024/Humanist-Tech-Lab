@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社情報 | ヒューマニタス・テクノロジー (Humanitas Technology)</title>
+    <meta name="description" content="ヒューマニタス・テクノロジーの組織アイデンティティ、チーム、および社会へのコミットメントを伝えます。テクノロジーを通じて人間の精神性を拡張し、共感と創造性に満ちた未来を築くこと。">
+    
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: '#4A90E2',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* カスタムスクロールバーなどの微調整 */
+        body {
+            font-feature-settings: "palt";
+        }
+        .text-justify-jp {
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-600 font-sans antialiased selection:bg-[#4A90E2] selection:text-white">
+
+<!-- 1. 指定ヘッダー -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+    <a href="../index.html" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-black shadow-lg" style="background-color: #4A90E2">
+        ヒ
+      </div>
+      <span class="text-xl font-black text-slate-800 tracking-tight group-hover:text-indigo-600 transition-colors">ヒューマニタス・テクノロジー (Humanitas Technology)</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="../index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors">ホーム</a>
+      <a href="#" class="px-5 py-2.5 bg-slate-900 text-white text-xs font-black rounded-full hover:bg-indigo-600 transition-all shadow-lg shadow-slate-200">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 2. ヒーローセクション -->
+<section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
+    <!-- 背景装飾 -->
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-50 mix-blend-multiply filter animate-blob"></div>
+    <div class="absolute top-0 left-0 -ml-20 -mt-20 w-72 h-72 bg-indigo-100 rounded-full blur-3xl opacity-50 mix-blend-multiply filter animate-blob animation-delay-2000"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-brand text-xs font-bold mb-6">
+                <span class="w-2 h-2 rounded-full bg-brand"></span>
+                COMPANY IDENTITY
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.2] mb-6 tracking-tight">
+                テクノロジーの先に、<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#4A90E2] to-indigo-600">人間の体温を感じる未来を。</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-500 font-medium leading-relaxed max-w-2xl">
+                私たちは効率化のためだけに技術を磨くのではありません。<br class="hidden md:block">
+                人の心を豊かにし、共感と創造性を解き放つために存在しています。
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- 3. メインコンテンツ -->
+<main class="py-20 lg:py-24">
+    <div class="max-w-3xl mx-auto px-6">
+        
+        <!-- コンテンツヘッダー -->
+        <div class="mb-12 border-l-4 border-[#4A90E2] pl-6">
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">私たちの理念</h2>
+            <p class="text-slate-500 font-medium">PHILOSOPHY</p>
+        </div>
+
+        <!-- 本文 -->
+        <div class="prose prose-lg prose-slate text-slate-600 leading-loose text-justify-jp">
+            <p class="mb-8">
+                私たちヒューマニタス・テクノロジーは、創業以来一つの根源的な問いに向き合い続けてきました。「テクノロジーの進化は、果たして人間を真に幸福にしているだろうか？」と。デジタル化が加速し、あらゆるものが効率化される現代において、私たちは数値化できる利便性だけではなく、心の豊かさや精神的な充足感という、より本質的な価値の創造を目指しています。
+            </p>
+            
+            <p class="mb-8">
+                私たちのミッションは、テクノロジーを媒介として人間の精神性を拡張し、人々の間に深い共感と新たな創造性を呼び覚ますことです。私たちが開発するソリューションは、単にタスクを自動化するツールではありません。それは、人が本来持っている優しさ、想像力、そして他者を想う力を解き放つための触媒です。AIが論理や計算を担うならば、人間は感性や意味の形成を担う。この有機的な共生関係こそが、私たちが描く未来の青写真です。
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mt-12 mb-6">分断から共鳴へ</h3>
+            
+            <p class="mb-8">
+                心の機微を捉えるインターフェース、距離や言語の壁を超えて温もりを伝える通信技術、そして多様な価値観をつなぎ合わせるプラットフォーム。これらはすべて、分断された世界を再び結びつけ、孤独を癒やし、一人ひとりの内なる可能性を最大化するために設計されています。技術が進めば進むほど、人と人との関係は希薄になるのではなく、むしろより深く、より人間らしいものへと進化すべきだと私たちは信じています。
+            </p>
+
+            <p class="mb-12">
+                真のイノベーションとは、最新の技術スペックによって定義されるものではなく、それを使う人の心がどれだけ豊かになったか、どれだけ社会に笑顔が増えたかによって定義されるべきです。だからこそ、私たちは倫理的な技術開発を徹底し、持続可能で包括的な社会の実現に強くコミットします。共感に満ち、創造性が溢れ出す未来へ。ヒューマニタス・テクノロジーは、人間中心のテクノロジーの最前線で、静かなる革命を続けてまいります。
+            </p>
+        </div>
+
+        <!-- 会社概要テーブル -->
+        <div class="mt-16 bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100">
+            <h3 class="text-lg font-black text-slate-800 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-building text-[#4A90E2]"></i> 会社概要
+            </h3>
+            <dl class="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-y-8 text-sm">
+                <div class="contents">
+                    <dt class="font-bold text-slate-900 md:col-span-1">社名</dt>
+                    <dd class="text-slate-600 md:col-span-2">ヒューマニタス・テクノロジー 株式会社</dd>
+                </div>
+                <div class="contents">
+                    <dt class="font-bold text-slate-900 md:col-span-1">英文社名</dt>
+                    <dd class="text-slate-600 md:col-span-2">Humanitas Technology Inc.</dd>
+                </div>
+                <div class="contents">
+                    <dt class="font-bold text-slate-900 md:col-span-1">設立</dt>
+                    <dd class="text-slate-600 md:col-span-2">2024年4月1日</dd>
+                </div>
+                <div class="contents">
+                    <dt class="font-bold text-slate-900 md:col-span-1">事業内容</dt>
+                    <dd class="text-slate-600 md:col-span-2">
+                        人間拡張技術の研究開発<br>
+                        共感型コミュニケーションプラットフォームの運営<br>
+                        AI倫理コンサルティング
+                    </dd>
+                </div>
+            </dl>
+        </div>
+
+        <!-- 4. 指定リンクエリア -->
+        <div class="mt-20 pt-10 border-t border-slate-100">
+            <h3 class="text-xl font-black mb-8 text-slate-800 flex items-center gap-3">
+              <i class="fa-solid fa-link text-indigo-500"></i> ナビゲーション
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+                <a href="../index.html" class="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-transparent hover:border-indigo-400 hover:bg-white hover:shadow-xl transition-all group">
+                  <span class="font-bold text-slate-700 group-hover:text-indigo-600">ホームに戻る</span>
+                  <i class="fa-solid fa-arrow-right-long text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-2"></i>
+                </a>
+              
+            </div>
+          </div>
+
+    </div>
+</main>
+
+<!-- 5. 指定フッター -->
+<footer class="bg-slate-900 text-white py-20 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-white/10 pb-12 mb-12">
+    <div>
+      <h4 class="text-2xl font-black mb-6">ヒューマニタス・テクノロジー (Humanitas Technology)</h4>
+      <p class="text-slate-400 leading-relaxed max-w-md font-medium">テクノロジーを通じて人間の精神性を拡張し、共感と創造性に満ちた未来を築くこと。</p>
+    </div>
+    <div class="flex flex-col md:items-end justify-center">
+       <div class="flex gap-4 mb-4">
+         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-twitter"></i></a>
+         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-linkedin"></i></a>
+       </div>
+       <p class="text-slate-500 text-sm font-bold">© 2024 ヒューマニタス・テクノロジー (Humanitas Technology). All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
