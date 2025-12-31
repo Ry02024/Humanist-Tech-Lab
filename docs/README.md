@@ -1,81 +1,85 @@
-# Humanitas Technology (ヒューマニタス・テクノロジー)
+# 心技一体：Human-Centric Tech
 
-![Humanitas Technology Banner](https://img.shields.io/badge/Humanitas-Technology-blueviolet?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Status](https://img.shields.io/badge/status-active-success.svg)
+![Concept](https://img.shields.io/badge/concept-Human--Centric-orange)
 
-## 概要
-**Humanitas Technology (ヒューマニタス・テクノロジー)** は、技術と人間性の調和を探求し、デジタル空間における新たな精神性の在り方を提案するWebプラットフォームです。単なる情報の集積地ではなく、テクノロジーがいかにして人の心を豊かにし、深い繋がりを生み出せるかを体現する場として構築されています。
-
-## ブランドミッション
-> **「テクノロジーを通じて人間の精神性を拡張し、共感と創造性に満ちた未来を築くこと」**
-
-私たちは、ツールとしての利便性のみを追求するのではなく、それを使う人間の内面的な成長や、他者への深い共感、そして無限の創造性を引き出すための基盤としてのテクノロジーを提唱します。
+> **「テクノロジーは、人の心を拡張するために。」**
+> 
+> 私たちは、テクノロジーを単なる効率化の道具ではなく、人間の精神を補完し、心の豊かさを引き出す「技」として再定義します。
 
 ---
 
-## プロジェクト構成
+## 👁️ ビジョン・ミッション
 
-本プロジェクトは、情報の保守性と拡張性を考慮し、以下のディレクトリ構造を採用しています。
+**「心技一体」**の思想に基づき、テクノロジーを人間の精神の自然な拡張として捉え、以下の3点を約束します。
+
+1.  **精神の拡張:** 認知負荷を減らし、人間の直感と感性を最大限に引き出すインターフェース。
+2.  **心の豊かさへの寄与:** 効率性だけでなく、静寂や内省、深い繋がりを尊重するプロダクト設計。
+3.  **調和のとれた進化:** 人間の尊厳を損なうことなく、生活に溶け込む技術の提供。
+
+---
+
+## 📂 ディレクトリ構成
+
+本プロジェクトは、情報のアクセス性を高め、ユーザーが迷うことなくコンテンツを探索できるよう、以下の階層構造で設計されています。
 
 ```text
-humanitas-technology/
-├── index.html          # メインエントリーポイント（ホーム画面）
-├── sections/           # プラットフォームの主要機能・カテゴリ別コンポーネント
-│   ├── philosophy.html # ブランド哲学とビジョン
-│   ├── gallery.html    # 創造性を可視化するコンテンツ
-│   └── roadmap.html    # 未来へのマイルストーン
-└── articles/           # 精神性と技術に関する寄稿・技術解説記事
-    ├── archive/        # 過去のアーカイブ
-    └── latest/         # 最新のインサイト
+.
+├── index.html                # プロジェクトの玄関口（ホーム）
+├── [section]/                # 各カテゴリー（心の健康、技術論、哲学など）
+│   ├── index.html            # セクションごとのインデックス・概要
+│   └── [article].html        # 各テーマに基づいた詳細コンテンツ
+└── assets/                   # CSS, JS, 画像リソース（任意追加分）
 ```
 
-### 構成の解説
-- **`index.html`**: ユーザーが最初に訪れるゲートウェイです。ミッションステートメントを視覚的に伝え、各セクションへの導線を提供します。
-- **`sections/`**: サイトを構成する主要なモジュールが格納されています。テーマごとに論理的に分割されており、ユーザー体験を損なわない設計となっています。
-- **`articles/`**: 人間の精神性やテクノロジーの倫理、共感型デザインなどに関する深い考察をまとめたドキュメント群です。MDファイルまたはHTML形式で管理されます。
+---
+
+## 🛠 特徴
+
+-   **Human-Centric Design:** ユーザー体験を最優先し、精神的な満足度を指標に設計。
+-   **Static Architecture:** 高速なレンダリングと高い保守性を実現するクリーンな静的構造。
+-   **Responsive & Minimalist:** 余計なノイズを排除し、コンテンツ（＝知恵）に集中できるUI。
 
 ---
 
-## 使用技術
+## 🚀 はじめ方
 
-本プロジェクトは、パフォーマンス、アクセシビリティ、および持続可能性を重視したスタックで構築されています。
+### クローン
 
-- **Frontend**: 
-  - HTML5 / CSS3 (Modern CSS Variable & Grid/Flexbox)
-  - JavaScript (Vanilla JS / ES6+)
-- **Typography**: 
-  - 精神性を表現するための高品質なセリフ体およびサンセリフ体のフォントセット
-- **Version Control**: 
-  - Git / GitHub
-- **Deployment**: 
-  - GitHub Pages (推奨)
+```bash
+git clone https://github.com/your-username/shin-gi-ittai.git
+cd shin-gi-ittai
+```
 
----
+### プレビュー
 
-## セットアップと開発
+特別なビルド環境は不要です。任意のブラウザで `index.html` を開いてください。
 
-ローカル環境でプロジェクトを閲覧・開発する場合は、以下の手順を実行してください。
-
-1. **リポジトリのクローン**
-   ```bash
-   git clone https://github.com/your-username/humanitas-technology.git
-   ```
-
-2. **ディレクトリへ移動**
-   ```bash
-   cd humanitas-technology
-   ```
-
-3. **ローカルサーバーの起動** (例: VS Code Live Serverなど)
-   ブラウザで `index.html` を開くことで、サイトのプレビューが可能です。
+```bash
+# 例: Pythonを使用してローカルサーバーを起動する場合
+python3 -m http.server 8000
+```
 
 ---
 
-## ライセンス
+## 🤝 コントリビューション
 
-Copyright (c) 2024 Humanitas Technology Project.
-このプロジェクトは [MITライセンス](LICENSE) の下で公開されています。
+私たちは、この哲学に共鳴する開発者、デザイナー、思想家を歓迎しています。
+「心の豊かさに寄与する」という視点からの改善提案をお待ちしております。
+
+1.  プロジェクトをフォークする
+2.  機能ブランチを作成する (`git checkout -b feature/AmazingShinGi`)
+3.  変更をコミットする (`git commit -m 'Add some AmazingShinGi'`)
+4.  ブランチへプッシュする (`git push origin feature/AmazingShinGi`)
+5.  プルリクエストを作成する
 
 ---
 
-Built with empathy and code. / 共感とコードによって構築されました。
+## 📄 ライセンス
+
+このプロジェクトは [MIT License](LICENSE) のもとで公開されています。
+
+---
+
+© 2024 心技一体：Human-Centric Tech Project. Built with heart and soul.
