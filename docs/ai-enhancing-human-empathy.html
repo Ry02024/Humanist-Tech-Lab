@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>感情を拡張するAI：共感を深めるための新たなデジタル・ツール | Humanist Tech Lab</title>
+    <meta name="description" content="効率化の影で失われがちな「共感」を、AIがどのようにサポートし、人間の感性をより豊かに表現できるかを考察します。">
+    
+    <!-- Google Fonts: Noto Serif JP (Title) & Noto Sans JP (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#34495E',
+                        brandDark: '#2c3e50',
+                        accent: '#6366f1', // Indigo-500 equivalent
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    lineHeight: {
+                        'loose-jp': '2',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-feature-settings: "palt";
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-white group-hover:bg-accent transition-colors">
+                    <i class="fa-solid fa-layer-group text-sm"></i>
+                </div>
+                <span class="text-lg font-bold text-slate-800 tracking-wide font-serif group-hover:text-accent transition-colors">Humanist Tech Lab</span>
+            </a>
+            <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-brand flex items-center gap-2 transition-colors">
+                <i class="fa-solid fa-house text-slate-400"></i>
+                <span>ホーム</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-6 bg-brand text-white relative overflow-hidden">
+        <!-- Decorative Background Element -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+        
+        <div class="max-w-3xl mx-auto relative z-10 text-center">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-wider uppercase bg-white/10 rounded-full border border-white/20 text-indigo-100">
+                Philosophy & Technology
+            </div>
+            <h1 class="text-3xl md:text-5xl font-serif font-bold leading-tight mb-8 tracking-wide">
+                感情を拡張するAI：<br class="hidden md:block" />
+                共感を深めるための<br class="md:hidden" />新たなデジタル・ツール
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light">
+                効率化の影で失われがちな「共感」を、AIがどのようにサポートし、<br class="hidden md:block" />
+                人間の感性をより豊かに表現できるかを考察します。
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow px-6 py-16">
+        <article class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100">
+            
+            <!-- Section 1 -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-serif font-bold text-slate-800 mb-6 pb-2 border-b border-slate-200 flex items-center gap-3">
+                    <span class="text-accent text-lg"><i class="fa-solid fa-fingerprint"></i></span>
+                    デジタル時代の「孤独」とAIの役割
+                </h2>
+                <p class="mb-6 leading-loose-jp text-justify">
+                    私たちはかつてないほど接続された世界に生きていますが、逆説的にも、かつてないほどの孤独を感じています。デジタルの効率化は、私たちから「間（ま）」を奪い、コミュニケーションを情報の伝達のみに削ぎ落としてしまいました。
+                </p>
+                <p class="mb-6 leading-loose-jp text-justify">
+                    しかし、ここでAIを単なる「自動化ツール」としてではなく、「感性の鏡」として捉え直す視点が必要です。Humanist Tech Labでは、AIが人間の感情を代替するのではなく、私たちが自身の感情に気づき、他者へ届ける手助けをするための技術開発を提唱しています。
+                </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-serif font-bold text-slate-800 mb-6 pb-2 border-b border-slate-200 flex items-center gap-3">
+                    <span class="text-accent text-lg"><i class="fa-solid fa-heart-pulse"></i></span>
+                    共感の解像度を高める
+                </h2>
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-brand mb-8">
+                    <p class="italic text-slate-600 font-serif">
+                        「言葉にならなかった想いを、AIが色彩や音色、あるいは詩的な隠喩へと変換するとき、私たちは初めて自分の内面と対話することができる。」
+                    </p>
+                </div>
+                <p class="mb-6 leading-loose-jp text-justify">
+                    例えば、テキストベースのコミュニケーションにおいて、AIが書き手の感情の機微を読み取り、「この表現は少し攻撃的に受け取られる可能性があります」と穏やかに示唆するインターフェース。あるいは、言葉にするのが難しい複雑な感情を、生成AIが抽象的なビジュアルとして可視化し、他者との共有を可能にするツール。
+                </p>
+                <p class="mb-6 leading-loose-jp text-justify">
+                    これらは、人間の能力を退化させるものではなく、私たちが他者の痛みに寄り添い、喜びを分かち合うための「共感の解像度」を高める補助線となり得ます。
+                </p>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-serif font-bold text-slate-800 mb-6 pb-2 border-b border-slate-200 flex items-center gap-3">
+                    <span class="text-accent text-lg"><i class="fa-solid fa-seedling"></i></span>
+                    尊厳あるテクノロジーの未来
+                </h2>
+                <p class="leading-loose-jp text-justify">
+                    技術を人間の精神の拡張として位置づけるとき、最も重要なのは「主語は常に人間である」という原則です。AIは答えを出す存在ではなく、私たちがより深く問い、より深く感じるための伴走者です。一人ひとりの尊厳と創造性が中心となる社会において、AIは冷徹な計算機ではなく、温かな触媒として機能するでしょう。
+                </p>
+            </section>
+
+            <!-- Required Navigation Block -->
+            <div class="mt-16 pt-8 border-t border-slate-200">
+                <h3 class="text-xl font-bold mb-6 text-slate-800 flex items-center gap-2">
+                  <i class="fa-solid fa-compass text-indigo-500"></i> 関連コンテンツ・ナビゲーション
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  
+                    <a href="index.html" class="flex items-center justify-between p-5 bg-white rounded-2xl border border-slate-200 hover:border-indigo-400 hover:shadow-lg transition-all group">
+                      <span class="font-bold text-slate-700 group-hover:text-indigo-600">ホーム</span>
+                      <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                  
+                    <a href="philosophy.html" class="flex items-center justify-between p-5 bg-white rounded-2xl border border-slate-200 hover:border-indigo-400 hover:shadow-lg transition-all group">
+                      <span class="font-bold text-slate-700 group-hover:text-indigo-600">「思想と哲学」へ戻る</span>
+                      <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                  
+                </div>
+              </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand text-slate-300 py-12 px-6">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-layer-group text-accent text-xl"></i>
+                <span class="font-serif font-bold text-white text-lg">Humanist Tech Lab</span>
+            </div>
+            <div class="text-sm font-light">
+                技術と人間性の調和を探求する。
+            </div>
+            <div class="text-xs text-slate-400 mt-4 md:mt-0">
+                &copy; 2024 Humanist Tech Lab
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
