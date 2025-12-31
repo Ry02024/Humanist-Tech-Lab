@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Spectrum | Lumina Tech Arts</title>
+    <meta name="description" content="枠にとらわれない実験的な試みや、日々のインスピレーションを記録する思索の断片。">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Noto+Sans+JP:wght@300;400;700;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #F8FAFC;
+        }
+        .font-handwriting {
+            font-family: 'Caveat', cursive;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none; 
+            scrollbar-width: none; 
+        }
+        
+        /* Custom Animations */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-800">
+
+    <!-- 1. ヘッダー -->
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center gap-4">
+        <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-white font-black shadow-lg" style="background-color: #2C3E50">
+            L
+          </div>
+          <span class="text-lg sm:text-xl font-black text-slate-800 tracking-tight group-hover:text-indigo-600 transition-colors">
+            Lumina Tech Arts
+          </span>
+        </a>
+        
+        <nav class="hidden md:flex items-center gap-6 overflow-x-auto no-scrollbar">
+          
+          <a href="../digital-craftsmanship/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+            Digital Craftsmanship
+          </a>
+        
+          <a href="../luminous-philosophy/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+            Luminous Philosophy
+          </a>
+        
+          <a href="../technical-architecture/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+            Technical Architecture
+          </a>
+        
+          <a href="../creative-spectrum/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+            Creative Spectrum
+          </a>
+        
+        </nav>
+    
+        <div class="flex items-center gap-3">
+          <a href="#" class="hidden sm:block px-5 py-2.5 bg-slate-900 text-white text-xs font-black rounded-full hover:bg-indigo-600 transition-all shadow-lg shadow-slate-200 whitespace-nowrap">
+            Contact
+          </a>
+          <button class="md:hidden p-2 text-slate-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <i class="fa-solid fa-bars-staggered text-xl"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 p-6 space-y-4 animate-fadeIn">
+        <div class="flex flex-col gap-4">
+          
+          <a href="../digital-craftsmanship/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+            Digital Craftsmanship
+          </a>
+        
+          <a href="../luminous-philosophy/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+            Luminous Philosophy
+          </a>
+        
+          <a href="../technical-architecture/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+            Technical Architecture
+          </a>
+        
+          <a href="../creative-spectrum/index.html" class="text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors whitespace-nowrap">
+            Creative Spectrum
+          </a>
+        
+          <a href="#" class="block w-full text-center px-5 py-3 bg-slate-900 text-white text-xs font-black rounded-xl">
+            Contact
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. メインヒーローセクション -->
+    <section class="relative pt-40 pb-20 overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6">
+            <span class="inline-block py-1 px-3 rounded-full bg-indigo-50 text-indigo-600 text-xs font-black uppercase tracking-wider mb-6 border border-indigo-100">
+                Playground & Archives
+            </span>
+            <h1 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight leading-tight">
+                Creative <br class="sm:hidden">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500">Spectrum</span>
+            </h1>
+            <div class="flex flex-col md:flex-row gap-8 md:items-end justify-between">
+                <p class="text-xl text-slate-600 font-medium max-w-2xl leading-relaxed">
+                    完成されたプロダクトの裏側にある、無数の実験と失敗。<br>
+                    枠にとらわれない試みや、日々のインスピレーションを記録する思索の断片集。
+                </p>
+                
+                <!-- Filter Tabs (Visual Only for UI Demo) -->
+                <div class="flex gap-2 p-1 bg-white rounded-xl shadow-sm border border-slate-200">
+                    <button class="px-4 py-2 bg-slate-900 text-white rounded-lg text-xs font-bold shadow-md">All</button>
+                    <button class="px-4 py-2 hover:bg-slate-50 text-slate-500 rounded-lg text-xs font-bold transition-colors">Experiments</button>
+                    <button class="px-4 py-2 hover:bg-slate-50 text-slate-500 rounded-lg text-xs font-bold transition-colors">Journal</button>
+                    <button class="px-4 py-2 hover:bg-slate-50 text-slate-500 rounded-lg text-xs font-bold transition-colors">Sketches</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. メインコンテンツセクション (Masonry Style Grid) -->
+    <main class="max-w-7xl mx-auto px-6 pb-20">
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+
+            <!-- Item 1: Featured Visual -->
+            <article class="break-inside-avoid bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 group cursor-pointer">
+                <div class="relative h-64 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-purple-600 opacity-90 transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i class="fa-solid fa-shapes text-6xl text-white/50"></i>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full">
+                        Generative UI
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-indigo-600 transition-colors">有機的なインターフェースの実験</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                        ユーザーの感情に合わせて形状を変化させるボタンコンポーネントのプロトタイプ。自然界の「ゆらぎ」を数式で再現する試み。
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-xs font-semibold text-slate-400">#CSS</span>
+                        <span class="text-xs font-semibold text-slate-400">#Animation</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Item 2: Text / Note -->
+            <article class="break-inside-avoid bg-[#FFF8E1] rounded-3xl p-8 shadow-sm border border-orange-100 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <i class="fa-solid fa-quote-left text-orange-200 text-6xl absolute top-4 left-4 -z-0"></i>
+                <div class="relative z-10">
+                    <p class="font-handwriting text-2xl text-slate-800 mb-4 leading-normal">
+                        "技術は冷たいものではなく、使い手の体温を伝えるための媒体であるべきだ。"
+                    </p>
+                    <div class="flex items-center gap-3 mt-6">
+                        <div class="w-8 h-8 rounded-full bg-orange-200 flex items-center justify-center text-orange-700 text-xs font-bold">L</div>
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Daily Thought</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Item 3: Code Snippet -->
+            <article class="break-inside-avoid bg-slate-900 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex gap-1.5">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500">React Hook</span>
+                </div>
+                <div class="font-mono text-xs text-indigo-300 bg-slate-800/50 p-4 rounded-xl mb-4 overflow-x-auto">
+                    <code>const useSoul = (input) => {<br>
+&nbsp;&nbsp;const [emotion, setEmotion] = useState(null);<br>
+&nbsp;&nbsp;useEffect(() => {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;analyzeSentiment(input);<br>
+&nbsp;&nbsp;}, [input]);<br>
+&nbsp;&nbsp;return emotion;<br>
+}</code>
+                </div>
+                <h3 class="text-white font-bold text-lg mb-1">Code as Poetry</h3>
+                <p class="text-slate-400 text-sm">ロジックの中に物語を見出す。</p>
+            </article>
+
+            <!-- Item 4: Photo / Mood -->
+            <article class="break-inside-avoid bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 group">
+                <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mountain Landscape" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="text-lg font-bold text-slate-800">未踏の景色</h3>
+                        <span class="text-xs text-slate-400 font-mono">2024.05.15</span>
+                    </div>
+                    <p class="text-slate-500 text-sm">
+                        デジタルツイン技術が発展したとしても、肌で感じる「風」の解像度には敵わない。アナログな体験こそがデジタルのインスピレーション源泉。
+                    </p>
+                </div>
+            </article>
+
+            <!-- Item 5: Compact Idea -->
+            <article class="break-inside-avoid bg-indigo-50 rounded-3xl p-6 border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-pointer">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-indigo-200 flex items-center justify-center text-indigo-700 shrink-0">
+                        <i class="fa-regular fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-1">音声UIの「間」の研究</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            即答するAIよりも、少し考えてから答えるAIの方が信頼性が高いという仮説の検証ログ。
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+             <!-- Item 6: Typography Experiment -->
+             <article class="break-inside-avoid bg-slate-800 text-white rounded-3xl p-8 text-center hover:scale-[1.02] transition-transform duration-300 flex flex-col items-center justify-center min-h-[200px]">
+                <h2 class="text-5xl font-black tracking-tighter mb-2 font-serif italic">Serif</h2>
+                <p class="text-slate-400 text-sm tracking-widest uppercase">vs</p>
+                <h2 class="text-5xl font-black tracking-tighter mt-2 font-sans">Sans</h2>
+                <p class="mt-6 text-xs text-slate-400">フォントの組み合わせによる感情伝達のABテスト</p>
+            </article>
+
+        </div>
+
+        <!-- Pagination / Load More -->
+        <div class="mt-16 text-center">
+            <button class="px-8 py-3 bg-white border border-slate-200 text-slate-600 rounded-full font-bold text-sm hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm">
+                Load more fragments <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+            </button>
+        </div>
+    </main>
+
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- 4. リンクエリア -->
+        <div class="mt-20 pt-10 border-t border-slate-100">
+            <h3 class="text-xl font-black mb-8 text-slate-800 flex items-center gap-3">
+              <i class="fa-solid fa-compass text-indigo-500"></i> Browse Content
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              
+                <a href="../index.html" class="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-transparent hover:border-indigo-400 hover:bg-white hover:shadow-xl transition-all group">
+                  <span class="font-bold text-slate-700 group-hover:text-indigo-600 text-sm sm:text-base">ホームに戻る</span>
+                  <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                </a>
+
+                <a href="../digital-craftsmanship/index.html" class="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-transparent hover:border-indigo-400 hover:bg-white hover:shadow-xl transition-all group">
+                    <span class="font-bold text-slate-700 group-hover:text-indigo-600 text-sm sm:text-base">Digital Craftsmanship</span>
+                    <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                  </a>
+              
+            </div>
+          </div>
+    </div>
+
+    <!-- 5. フッター -->
+    <footer class="bg-slate-900 text-white py-16 sm:py-20 px-6 mt-20">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-white/10 pb-12 mb-12">
+        <div>
+          <h4 class="text-2xl font-black mb-6">Lumina Tech Arts</h4>
+          <p class="text-slate-400 leading-relaxed max-w-md font-medium text-sm sm:text-base">人間の創造性を尊重し、技術を精神の翼として機能させることで、真に豊かなデジタル社会を構築する。</p>
+        </div>
+        <div class="flex flex-col md:items-end justify-center">
+           <div class="flex gap-4 mb-6">
+             <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-twitter"></i></a>
+             <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-linkedin"></i></a>
+           </div>
+           <p class="text-slate-500 text-xs sm:text-sm font-bold text-center md:text-right">© 2024 Lumina Tech Arts.<br class="sm:hidden"/> Generated by MySiteGen-Agent.</p>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>
