@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="直線的で冷徹なコードに、自然界の曖昧さや温もりを取り入れることで、人間の精神を安らげるデジタル環境の在り方を探ります。">
+    <title>温もりのあるデジタルデザイン：アルゴリズムに「ゆらぎ」を宿す | Humanist Tech Lab</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#34495E',
+                            light: '#4B637B',
+                            dark: '#212F3D',
+                        },
+                        paper: '#F9F8F6',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2334495e' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* 日本語の美しさのための微調整 */
+        body {
+            font-feature-settings: "palt";
+            letter-spacing: 0.04em;
+            line-height: 1.8;
+        }
+        .text-justify {
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+        /* ゆらぎのアニメーション */
+        @keyframes subtle-float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: subtle-float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-paper text-brand font-sans antialiased flex flex-col min-h-screen selection:bg-brand selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-paper/90 backdrop-blur-sm border-b border-brand/10 transition-all duration-300">
+        <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 bg-brand text-white rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <i class="fa-solid fa-layer-group text-sm"></i>
+                </div>
+                <span class="font-serif font-bold text-xl tracking-wider text-brand">Humanist Tech Lab</span>
+            </a>
+            <nav>
+                <a href="index.html" class="text-sm font-bold text-brand/70 hover:text-brand transition-colors py-2 px-4 rounded-full hover:bg-brand/5">
+                    <i class="fa-solid fa-house mr-2"></i>ホーム
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-hero-pattern"></div>
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand/5 to-transparent pointer-events-none"></div>
+        
+        <div class="container mx-auto max-w-4xl relative z-10">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-brand/60 uppercase border border-brand/20 rounded-full bg-white/50 backdrop-blur-sm">
+                Philosophy & Design
+            </div>
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-brand drop-shadow-sm">
+                温もりのあるデジタルデザイン：<br>
+                アルゴリズムに<span class="inline-block relative text-brand-light">
+                    「ゆらぎ」
+                    <svg class="absolute -bottom-2 left-0 w-full h-2 text-brand/20" viewBox="0 0 100 10" preserveAspectRatio="none">
+                        <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="2" fill="none" />
+                    </svg>
+                </span>を宿す
+            </h1>
+            <p class="text-lg md:text-xl text-brand/80 leading-relaxed max-w-2xl font-serif">
+                直線的で冷徹なコードに、自然界の曖昧さや温もりを取り入れることで、人間の精神を安らげるデジタル環境の在り方を探ります。
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto max-w-3xl px-6 pb-24">
+        <article class="prose prose-slate prose-lg max-w-none text-justify">
+            
+            <!-- Section 1 -->
+            <div class="mb-16">
+                <h2 class="flex items-center gap-3 text-2xl md:text-3xl font-serif font-bold text-brand mb-6 pb-2 border-b border-brand/10">
+                    <i class="fa-solid fa-seedling text-brand/40 text-xl"></i>
+                    自然界の不完全さをコードに翻訳する
+                </h2>
+                <p class="mb-6 text-brand/80">
+                    現代のインターフェースはピクセル単位で管理され、あまりにも完璧すぎます。直角に交わるグリッド、ミリ秒の狂いもないアニメーション。しかし、人間の感覚は「1/fゆらぎ」の中にこそ安らぎを見出します。私たちは、厳密なレイアウトシステムの中に、手書きのストロークが持つ暖かさや、風に揺れる木漏れ日のようなランダムな要素を意図的に組み込む実験を行っています。
+                </p>
+                <p class="text-brand/80">
+                    それは単なるノスタルジーへの回帰ではありません。デジタルネイティブな環境において、予測不可能な「遊び」の余地を残すこと。それこそが、ユーザーの緊張を解きほぐし、画面の向こう側にいる作り手の体温を伝える唯一の方法なのです。
+                </p>
+            </div>
+
+            <!-- Quote Block -->
+            <div class="my-16 p-8 md:p-10 bg-white rounded-2xl shadow-sm border border-brand/5 relative overflow-hidden group hover:shadow-md transition-shadow duration-300">
+                <i class="fa-solid fa-quote-left absolute top-6 left-6 text-4xl text-brand/5 group-hover:text-brand/10 transition-colors"></i>
+                <blockquote class="relative z-10 text-center">
+                    <p class="text-xl md:text-2xl font-serif font-medium text-brand mb-4 leading-relaxed">
+                        「技術を人間の精神の拡張として位置づけ、<br class="hidden md:inline">一人ひとりの尊厳と創造性が中心となる社会を築く。」
+                    </p>
+                    <footer class="text-sm font-bold text-brand/50 tracking-widest uppercase">— Humanist Tech Lab ブランド理念</footer>
+                </blockquote>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="mb-12">
+                <h2 class="flex items-center gap-3 text-2xl md:text-3xl font-serif font-bold text-brand mb-6 pb-2 border-b border-brand/10">
+                    <i class="fa-solid fa-fingerprint text-brand/40 text-xl"></i>
+                    効率性よりも「心地よさ」の指標を
+                </h2>
+                <p class="mb-6 text-brand/80">
+                    クリックの反応速度やコンバージョン率だけでなく、そのフィードバックが心にどう響くかを私たちは問いかけます。画面の遷移は機械的ではなく、物語のページをめくるような情緒を持っているでしょうか。
+                </p>
+                <ul class="space-y-4 my-8 bg-brand/5 p-6 rounded-xl">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-green-600 mt-1.5 bg-white rounded-full p-1 text-xs shadow-sm"></i>
+                        <span class="text-brand/90 font-medium">視覚的な柔らかさ：鋭利な角を排し、有機的な曲線を多用する</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-green-600 mt-1.5 bg-white rounded-full p-1 text-xs shadow-sm"></i>
+                        <span class="text-brand/90 font-medium">時間の感覚：即時性よりも、呼吸に合わせたような自然な遅延</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-green-600 mt-1.5 bg-white rounded-full p-1 text-xs shadow-sm"></i>
+                        <span class="text-brand/90 font-medium">手触り感：物理的な質感を想起させる微細なテクスチャの使用</span>
+                    </li>
+                </ul>
+                <p class="text-brand/80">
+                    私たちは、テクノロジーが「道具」であることを超え、人生を豊かにする「パートナー」となるためのデザイン言語を編み出し続けています。
+                </p>
+            </div>
+
+            <!-- Required Internal Links Block -->
+            <div class="mt-16 pt-8 border-t border-slate-200">
+                <h3 class="text-xl font-bold mb-6 text-slate-800 flex items-center gap-2">
+                  <i class="fa-solid fa-compass text-indigo-500"></i> 関連コンテンツ・ナビゲーション
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  
+                    <a href="index.html" class="flex items-center justify-between p-5 bg-white rounded-2xl border border-slate-200 hover:border-indigo-400 hover:shadow-lg transition-all group">
+                      <span class="font-bold text-slate-700 group-hover:text-indigo-600">ホーム</span>
+                      <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                  
+                    <a href="philosophy.html" class="flex items-center justify-between p-5 bg-white rounded-2xl border border-slate-200 hover:border-indigo-400 hover:shadow-lg transition-all group">
+                      <span class="font-bold text-slate-700 group-hover:text-indigo-600">「思想と哲学」へ戻る</span>
+                      <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                  
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand text-white py-12 border-t border-brand-light">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="mb-4 md:mb-0">
+                    <h4 class="font-serif text-2xl font-bold mb-2">Humanist Tech Lab</h4>
+                    <p class="text-brand-light text-sm max-w-md">技術と人間の調和を探求し、より豊かなデジタル社会を創造するデザインラボ。</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-brand-light/60">
+                <p>&copy; 2024 Humanist Tech Lab. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">プライバシーポリシー</a>
+                    <a href="#" class="hover:text-white transition-colors">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
