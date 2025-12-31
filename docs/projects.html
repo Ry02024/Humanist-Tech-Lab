@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>実装の軌跡 | Humanist Tech Lab</title>
+    <meta name="description" content="テクノロジーを血の通った体験へと昇華させた具体的な事例や、プロトタイピングを通じた社会実装の成果を公開します。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Config & Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#34495E', // 指定テーマカラー
+                            light: '#4B6584',
+                            dark: '#2C3E50',
+                        },
+                        accent: {
+                            DEFAULT: '#6366F1', // Indigo系（指定コードとの調和のため）
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                color: '#334155',
+                                h1: { fontFamily: 'Noto Serif JP' },
+                                h2: { fontFamily: 'Noto Serif JP' },
+                                h3: { fontFamily: 'Noto Serif JP' },
+                            },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 日本語の美しさを引き出すための文字設定 */
+        body {
+            font-feature-settings: "palt";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            letter-spacing: 0.04em;
+            line-height: 1.8;
+        }
+        .text-justify-auto {
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-brand text-xl"></i>
+                    <a href="index.html" class="font-serif font-bold text-xl text-brand tracking-wider hover:text-brand-light transition-colors">
+                        Humanist Tech Lab
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-brand transition-colors group flex items-center gap-1">
+                        <i class="fa-solid fa-house text-slate-400 group-hover:text-brand transition-colors text-xs"></i>
+                        ホーム
+                    </a>
+                </div>
+                <!-- Mobile Menu Button (Icon only) -->
+                <div class="md:hidden flex items-center">
+                    <a href="index.html" class="p-2 rounded-md text-slate-500 hover:bg-slate-100 hover:text-brand transition-colors">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-brand text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <!-- Abstract Background Decoration -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white blur-3xl"></div>
+            <div class="absolute bottom-0 left-20 w-64 h-64 rounded-full bg-indigo-400 blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto text-center">
+            <div class="inline-block mb-4 px-3 py-1 bg-white/10 rounded-full border border-white/20 backdrop-blur-sm">
+                <span class="text-xs font-medium tracking-widest uppercase text-indigo-200">
+                    Implementation Journey
+                </span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight tracking-tight">
+                実装の軌跡
+            </h1>
+            <p class="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto font-light leading-relaxed">
+                テクノロジーを血の通った体験へと昇華させた具体的な事例や、<br class="hidden sm:inline">プロトタイピングを通じた社会実装の成果を公開します。
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- Introduction Article -->
+        <article class="prose prose-slate prose-lg max-w-none text-slate-600">
+            <p class="text-xl font-serif text-brand leading-loose mb-12 border-l-4 border-indigo-400 pl-6 italic">
+                私たちは技術を「効率化の道具」としてではなく、「人間の精神を拡張するための触媒」として捉えています。コードの一行一行が、使う人の尊厳を守り、創造性を刺激するものでなければなりません。ここでは、私たちの理念がどのように形となったか、その軌跡を辿ります。
+            </p>
+
+            <section class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand mb-8 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded bg-indigo-100 text-indigo-600 text-lg">
+                        <i class="fa-solid fa-fingerprint"></i>
+                    </span>
+                    感性を呼び覚ますインターフェース
+                </h2>
+                <p class="text-justify-auto mb-6">
+                    デジタル空間における「使いやすさ」は、しばしば「最短距離で目的を達成すること」と定義されます。しかし、Humanist Tech Labでは、その過程における「心地よさ」や「気づき」こそが重要だと考えます。
+                </p>
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 my-8">
+                    <h3 class="text-lg font-bold text-slate-800 mb-4">Project: Silent UI（静寂のUI）</h3>
+                    <p class="text-sm text-slate-500 mb-4">2023年 実証実験プロジェクト</p>
+                    <p class="mb-0">
+                        通知やポップアップによる注意の奪い合いから脱却し、ユーザーが自らの意志で情報に触れるまで「待つ」インターフェースを設計しました。結果として、ユーザーの滞在時間は減ったものの、コンテンツへの理解度と満足度は飛躍的に向上しました。これは、<strong>技術が人の時間を尊重する</strong>という姿勢の実装例です。
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand mb-8 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded bg-indigo-100 text-indigo-600 text-lg">
+                        <i class="fa-solid fa-seedling"></i>
+                    </span>
+                    尊厳を中心としたアーキテクチャ
+                </h2>
+                <p class="text-justify-auto mb-6">
+                    システム設計の段階から「倫理」を組み込む。それは、データの扱い方ひとつにも表れます。個人を単なるデータポイントとして集約するのではなく、文脈を持った一人の人間として扱うデータ構造への挑戦を行っています。
+                </p>
+                <ul class="list-none space-y-4 pl-0 my-8">
+                    <li class="flex items-start gap-4">
+                        <i class="fa-solid fa-check text-indigo-500 mt-1.5"></i>
+                        <div>
+                            <strong class="text-slate-800 block">透明性のあるアルゴリズム</strong>
+                            <span class="text-slate-500 text-sm">なぜその結果が表示されたのか、ユーザーが常に論理を追跡できる仕組みの提供。</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <i class="fa-solid fa-check text-indigo-500 mt-1.5"></i>
+                        <div>
+                            <strong class="text-slate-800 block">忘れられる権利の実装</strong>
+                            <span class="text-slate-500 text-sm">ユーザーがシステムから完全に離脱する際、その痕跡を美しく消去するプロセスの設計。</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand mb-8 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded bg-indigo-100 text-indigo-600 text-lg">
+                        <i class="fa-solid fa-hands-holding-circle"></i>
+                    </span>
+                    未来へのプロトタイピング
+                </h2>
+                <p class="text-justify-auto">
+                    私たちのラボでは、現在も「温かみのあるテクノロジー」をテーマに複数のプロトタイプを開発中です。スクリーンの中だけでなく、物理的な空間におけるテクノロジーのあり方を模索し、一人ひとりの創造性が自然と引き出される社会基盤の構築を目指しています。
+                </p>
+            </section>
+        </article>
+
+        <!-- Required Internal Link Block -->
+        <div class="mt-16 pt-8 border-t border-slate-200">
+            <h3 class="text-xl font-bold mb-6 text-slate-800 flex items-center gap-2">
+              <i class="fa-solid fa-compass text-indigo-500"></i> 関連コンテンツ・ナビゲーション
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+                <a href="index.html" class="flex items-center justify-between p-5 bg-white rounded-2xl border border-slate-200 hover:border-indigo-400 hover:shadow-lg transition-all group">
+                  <span class="font-bold text-slate-700 group-hover:text-indigo-600">トップページへ戻る</span>
+                  <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand text-slate-300 py-12 border-t border-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4 text-white">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span class="font-serif font-bold text-lg">Humanist Tech Lab</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        技術を人間の精神の拡張として位置づけ、<br>
+                        尊厳と創造性が中心となる社会を築く。
+                    </p>
+                </div>
+                <div class="col-span-1 md:col-span-2 flex flex-col md:flex-row justify-end items-start md:items-end gap-6">
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-dark flex items-center justify-center hover:bg-indigo-500 transition-colors text-white" aria-label="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-dark flex items-center justify-center hover:bg-indigo-500 transition-colors text-white" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-brand-light pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
+                <p>&copy; 2024 Humanist Tech Lab. All Rights Reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">プライバシーポリシー</a>
+                    <a href="#" class="hover:text-white transition-colors">利用規約</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
