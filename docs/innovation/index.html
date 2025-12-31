@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未来共創・イノベーション | ヒューマニック・ソリューションズ</title>
+    <meta name="description" content="研究開発のロードマップやパートナーシップを通じて、変化の激しい時代でも人が主役であり続けるための成長戦略と将来展望を公開します。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#2B5876',
+                            light: '#3e7091',
+                            dark: '#1e4058',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* カスタムアニメーション用 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        /* スクロールバー隠し */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-700 font-sans antialiased selection:bg-brand-light selection:text-white pt-20">
+
+    <!-- 1. Header (指定要件) -->
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center gap-4">
+        <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-white font-black shadow-lg" style="background-color: #2B5876">
+            ヒ
+          </div>
+          <span class="text-lg sm:text-xl font-black text-slate-800 tracking-tight group-hover:text-brand transition-colors">
+            ヒューマニック・ソリューションズ
+          </span>
+        </a>
+        
+        <!-- Desktop/Tablet Nav -->
+        <nav class="hidden md:flex items-center gap-6 overflow-x-auto no-scrollbar">
+          
+          <a href="../philosophy/index.html" class="text-sm font-bold text-slate-600 hover:text-brand transition-colors whitespace-nowrap">
+            ビジョンと倫理哲学
+          </a>
+        
+          <a href="../solutions/index.html" class="text-sm font-bold text-slate-600 hover:text-brand transition-colors whitespace-nowrap">
+            感性中心ソリューション
+          </a>
+        
+          <a href="../trust/index.html" class="text-sm font-bold text-slate-600 hover:text-brand transition-colors whitespace-nowrap">
+            価値実証と信頼性
+          </a>
+        
+          <a href="../innovation/index.html" class="text-sm font-bold text-brand transition-colors whitespace-nowrap">
+            未来共創・イノベーション
+          </a>
+        
+        </nav>
+    
+        <div class="flex items-center gap-3">
+          <a href="#" class="hidden sm:block px-5 py-2.5 bg-slate-900 text-white text-xs font-black rounded-full hover:bg-brand transition-all shadow-lg shadow-slate-200 whitespace-nowrap">
+            お問い合わせ
+          </a>
+          <!-- Mobile Menu Toggle -->
+          <button class="md:hidden p-2 text-slate-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <i class="fa-solid fa-bars-staggered text-xl"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 p-6 space-y-4 animate-fadeIn shadow-lg">
+        <div class="flex flex-col gap-4">
+          
+          <a href="../philosophy/index.html" class="text-sm font-bold text-slate-600 hover:text-brand transition-colors whitespace-nowrap">
+            ビジョンと倫理哲学
+          </a>
+        
+          <a href="../solutions/index.html" class="text-sm font-bold text-slate-600 hover:text-brand transition-colors whitespace-nowrap">
+            感性中心ソリューション
+          </a>
+        
+          <a href="../trust/index.html" class="text-sm font-bold text-slate-600 hover:text-brand transition-colors whitespace-nowrap">
+            価値実証と信頼性
+          </a>
+        
+          <a href="../innovation/index.html" class="text-sm font-bold text-brand transition-colors whitespace-nowrap">
+            未来共創・イノベーション
+          </a>
+        
+          <a href="#" class="block w-full text-center px-5 py-3 bg-slate-900 text-white text-xs font-black rounded-xl hover:bg-brand transition-colors">
+            お問い合わせ
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. Main Hero Section -->
+    <section class="relative bg-brand text-white overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-white rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-[-20%] left-[-10%] w-[400px] h-[400px] bg-indigo-400 rounded-full blur-[80px]"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28 lg:py-32 flex flex-col items-center text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-indigo-100 text-xs font-bold mb-6 tracking-wide uppercase backdrop-blur-sm">
+                R&D Roadmap 2030
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-6xl font-black tracking-tight mb-6 leading-tight">
+                未来共創・<br class="sm:hidden" />イノベーション
+            </h1>
+            <p class="text-indigo-100 text-base sm:text-lg lg:text-xl max-w-2xl font-medium leading-relaxed">
+                研究開発のロードマップやパートナーシップを通じて、変化の激しい時代でも人が主役であり続けるための成長戦略と将来展望を公開します。
+            </p>
+        </div>
+        
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180">
+            <svg class="relative block w-[calc(100%+1.3px)] h-[50px] sm:h-[80px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-white"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 3. Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        
+        <!-- Intro -->
+        <div class="mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-6 border-l-4 border-brand pl-4">
+                テクノロジーを人間のための奉仕者へ
+            </h2>
+            <p class="text-slate-600 leading-8 mb-6">
+                テクノロジーの進化はかつてないスピードで加速しています。しかし、私たちヒューマニック・ソリューションズにおいて、常に中心にあるのは一つの問いです。「その進化は、真に人間の幸福に寄与しているか？」<br>
+                私たちのイノベーション戦略の中核にあるのは、技術そのものの高度化や効率性の追求だけではありません。それが人間の精神的充足と創造性をいかに解放できるか、という「意味の変革」にこそ重点を置いています。
+            </p>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="grid md:grid-cols-2 gap-12 mb-20 items-center">
+            <div class="order-2 md:order-1">
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand/5 rounded-bl-[100px] -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                    <i class="fa-solid fa-handshake text-4xl text-brand mb-4 relative z-10"></i>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">共創のエコシステム</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        変化の激しい時代において、一社単独での課題解決は限界を迎えています。私たちは産業の垣根を超えた「共創」こそが次代の扉を開くと確信しています。スタートアップの敏捷性、アカデミアの深い知見、そして大企業の社会的実装力。これらを掛け合わせることで、単なる効率化を超えたイノベーションを創出します。
+                    </p>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-brand rounded-full"></span>
+                    オープンイノベーションの推進
+                </h3>
+                <p class="text-slate-600 leading-8">
+                    私たちは、パートナー企業との連携を通じて、技術と感性が融合する新たな領域を開拓しています。特に、心理学、認知科学、芸術分野とのクロスボーダーな連携は、これまでの工学的アプローチだけでは到達できなかった「人の心に響くソリューション」を生み出す原動力となっています。
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="mb-20">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-8 text-center">
+                2030年へのロードマップ：人間拡張技術
+            </h2>
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+                <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                    <!-- Step 1 -->
+                    <div class="p-8 text-center hover:bg-slate-50 transition-colors">
+                        <div class="w-12 h-12 mx-auto bg-indigo-50 text-brand rounded-full flex items-center justify-center font-black mb-4 text-lg">01</div>
+                        <h4 class="font-bold text-slate-800 mb-2">認知的パートナー</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            AIを思考の代替ではなく、認知能力を補完するパートナーとして定義。直感的な意思決定を支援するインターフェースの開発。
+                        </p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="p-8 text-center hover:bg-slate-50 transition-colors">
+                        <div class="w-12 h-12 mx-auto bg-indigo-50 text-brand rounded-full flex items-center justify-center font-black mb-4 text-lg">02</div>
+                        <h4 class="font-bold text-slate-800 mb-2">感性のデジタル化</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            非言語的なニュアンスや感情の機微を理解し、文脈に応じた寄り添いを行う「Empathic Computing」の実装。
+                        </p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="p-8 text-center hover:bg-slate-50 transition-colors">
+                        <div class="w-12 h-12 mx-auto bg-indigo-50 text-brand rounded-full flex items-center justify-center font-black mb-4 text-lg">03</div>
+                        <h4 class="font-bold text-slate-800 mb-2">創造性の解放</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            反復的な作業から人間を解放し、本来持っている創造的ポテンシャルを最大限に引き出すための環境構築。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="bg-slate-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+            
+            <div class="relative z-10 max-w-2xl">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <i class="fa-solid fa-scale-balanced text-indigo-400"></i>
+                    倫理と技術の融合
+                </h3>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                    技術が強力になればなるほど、倫理的な羅針盤が重要になります。私たちは開発プロセスの初期段階からELSI（倫理的・法的・社会的課題）への配慮を組み込み、人間性を損なうことのない技術実装を徹底しています。<br><br>
+                    安心・安全であることはもちろん、使う人の心が豊かになるテクノロジー。それが、私たちが未来に向けて約束する品質です。
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <span class="px-4 py-2 bg-white/10 rounded-lg text-sm font-medium border border-white/10">プライバシー保護</span>
+                    <span class="px-4 py-2 bg-white/10 rounded-lg text-sm font-medium border border-white/10">アルゴリズムの透明性</span>
+                    <span class="px-4 py-2 bg-white/10 rounded-lg text-sm font-medium border border-white/10">人間中心設計</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Link Area (指定要件) -->
+        <div class="mt-20 pt-10 border-t border-slate-100">
+            <h3 class="text-xl font-black mb-8 text-slate-800 flex items-center gap-3">
+              <i class="fa-solid fa-compass text-indigo-500"></i> Browse Content
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              
+                <a href="../index.html" class="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-transparent hover:border-indigo-400 hover:bg-white hover:shadow-xl transition-all group">
+                  <span class="font-bold text-slate-700 group-hover:text-indigo-600 text-sm sm:text-base">ホームに戻る</span>
+                  <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-indigo-500 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 5. Footer (指定要件) -->
+    <footer class="bg-slate-900 text-white py-16 sm:py-20 px-6 mt-20">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-white/10 pb-12 mb-12">
+        <div>
+          <h4 class="text-2xl font-black mb-6">ヒューマニック・ソリューションズ</h4>
+          <p class="text-slate-400 leading-relaxed max-w-md font-medium text-sm sm:text-base">テクノロジーを人間の精神的充足と創造性のための奉仕者へと再定義し、真に人間らしい未来を築く。</p>
+        </div>
+        <div class="flex flex-col md:items-end justify-center">
+           <div class="flex gap-4 mb-6">
+             <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-twitter"></i></a>
+             <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-linkedin"></i></a>
+           </div>
+           <p class="text-slate-500 text-xs sm:text-sm font-bold text-center md:text-right">© 2024 ヒューマニック・ソリューションズ.<br class="sm:hidden"/> Generated by MySiteGen-Agent.</p>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>
